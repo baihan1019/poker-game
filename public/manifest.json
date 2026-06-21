@@ -1,0 +1,14 @@
+{
+  "name": "争上游 — 四人扑克",
+  "short_name": "争上游",
+  "description": "四人联网扑克游戏（争上游变体）",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#0f3d1e",
+  "theme_color": "#1a5c2a",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
