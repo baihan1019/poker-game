@@ -24,7 +24,7 @@ export const FIVE_TYPES = {
 };
 
 // 五张牌型大小顺序（索引越大越大）
-const FIVE_TYPE_ORDER = ['straight', 'full_house', 'four_one', 'flush', 'straight_flush'];
+const FIVE_TYPE_ORDER = ['straight', 'flush', 'full_house', 'four_one', 'straight_flush'];
 
 /**
  * 判断 5 张牌是否为顺子

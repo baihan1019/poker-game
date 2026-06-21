@@ -4,7 +4,7 @@
 
 import { RANKS, getRankIndex, compareCards, sortCards } from './Card.js';
 
-const FIVE_TYPE_ORDER = ['straight', 'full_house', 'four_one', 'flush', 'straight_flush'];
+const FIVE_TYPE_ORDER = ['straight', 'flush', 'full_house', 'four_one', 'straight_flush'];
 
 function isStraight(cards) {
   if (cards.length !== 5) return false;

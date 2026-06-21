@@ -205,7 +205,7 @@ function getTypeName(ti) {
   if (ti.type === 'single') return '单张';
   if (ti.type === 'pair') return '对子';
   if (ti.type === 'triple') return '三条';
-  const names = ['顺子', '葫芦', '四带一', '同花', '同花顺'];
+  const names = ['顺子', '同花', '葫芦', '四带一', '同花顺'];
   const keys = ['straight', 'full_house', 'four_one', 'flush', 'straight_flush'];
   const idx = keys.indexOf(ti.fiveType);
   return idx >= 0 ? names[idx] : '五张';

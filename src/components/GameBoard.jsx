@@ -7,8 +7,8 @@ import { GAME_STATE } from '../game/GameEngine'
 import { getPlayType } from '../game/Rules'
 import { playCardSound, playPassSound, playBombSound, playYourTurnSound, playSelectSound } from '../game/Sound'
 
-const FIVE_NAMES = ['顺子', '葫芦', '四带一', '同花', '同花顺']
-const FIVE_TYPES = ['straight', 'full_house', 'four_one', 'flush', 'straight_flush']
+const FIVE_NAMES = ['顺子', '同花', '葫芦', '四带一', '同花顺']
+const FIVE_TYPES = ['straight', 'flush', 'full_house', 'four_one', 'straight_flush']
 
 /** 是否为大牌（需要特效） */
 function isBigPlay(typeInfo) {

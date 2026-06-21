@@ -166,8 +166,8 @@ function advanceToNextPlayer(game) {
  */
 export function getGameSummary(game) {
   const typeNameMap = { single: '单张', pair: '对子', triple: '三条' };
-  const fiveTypeNames = ['顺子', '葫芦', '四带一', '同花', '同花顺'];
-  const fiveTypes = ['straight', 'full_house', 'four_one', 'flush', 'straight_flush'];
+  const fiveTypeNames = ['顺子', '同花', '葫芦', '四带一', '同花顺'];
+  const fiveTypes = ['straight', 'flush', 'full_house', 'four_one', 'straight_flush'];
 
   return {
     state: game.state,

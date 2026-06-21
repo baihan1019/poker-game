@@ -106,8 +106,8 @@ function advanceTurn(game) {
 
 export function getGameSummary(game) {
   const tn = { single: '单张', pair: '对子', triple: '三条' };
-  const fn = ['顺子', '葫芦', '四带一', '同花', '同花顺'];
-  const ft = ['straight', 'full_house', 'four_one', 'flush', 'straight_flush'];
+  const fn = ['顺子', '同花', '葫芦', '四带一', '同花顺'];
+  const ft = ['straight', 'flush', 'full_house', 'four_one', 'straight_flush'];
 
   return {
     state: game.state,
