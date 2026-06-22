@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 移动端视图设置：禁止用户缩放，适配安全区域 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#1a5c2a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="争上游" />
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/poker-game/manifest.json" />
+    <link rel="apple-touch-icon" href="/poker-game/icon-192.png" />
+    <title>四人扑克 — 争上游</title>
+    <script type="module" crossorigin src="/poker-game/assets/index-iP4TvBTI.js"></script>
+    <link rel="stylesheet" crossorigin href="/poker-game/assets/index-DlbxDwkS.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Service Worker 注册：离线缓存壳资源，PWA 添加到主屏幕 -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/poker-game/sw.js').catch(() => {
+            // SW 注册失败不影响主功能
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
