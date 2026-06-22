@@ -19,8 +19,12 @@ const IS_LOCAL = window.location.hostname === 'localhost'
   || window.location.hostname.startsWith('10.')
   || window.location.hostname.startsWith('172.')
 
-// 线上服务器地址（通过环境变量配置）
-const PRODUCTION_WS = import.meta.env.VITE_WS_URL || ''
+// 是否 GitHub Pages
+const IS_GITHUB = window.location.hostname.endsWith('github.io')
+
+// 线上地址：环境变量 > GitHub Pages 自动用 Railway
+const RAILWAY = 'wss://poker-game-production-815c.up.railway.app'
+const PRODUCTION_WS = import.meta.env.VITE_WS_URL || (IS_GITHUB ? RAILWAY : '')
 const LAN_PORT = import.meta.env.VITE_WS_LAN_PORT || 4050
 
 function getLanUrl() {
@@ -28,7 +32,6 @@ function getLanUrl() {
   return `ws://${host}:${LAN_PORT}`
 }
 
-// 本地开发默认局域网，部署后默认线上
 const DEFAULT_MODE = (!PRODUCTION_WS || IS_LOCAL) ? 'lan' : 'online'
 
 export default function useWebSocket(initialMode) {
