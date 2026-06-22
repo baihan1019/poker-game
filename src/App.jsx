@@ -169,6 +169,14 @@ export default function App() {
 
   // ===== 渲染 =====
   if (!mode) {
+    // game_start 已收到但 mode 还没切 → 过渡屏，防止闪回大厅
+    if (ws.roomState?.game) {
+      return (
+        <div className="loading-transition">
+          <div className="loading-text">🎴 进入游戏...</div>
+        </div>
+      )
+    }
     return (
       <Lobby
         onStartSinglePlayer={handleStartSingle}

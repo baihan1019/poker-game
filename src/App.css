@@ -531,6 +531,17 @@ body {
   .play-area { min-height: 110px; }
 }
 
+/* ===== 过渡加载屏 ===== */
+.loading-transition {
+  min-height: 100vh; min-height: 100dvh;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--felt);
+}
+.loading-text {
+  font-size: 1.3rem; color: var(--gold);
+  animation: thinkingPulse 1s ease-in-out infinite;
+}
+
 /* ===== 安全区域 ===== */
 @supports (padding: max(0px)) {
   .game-board { padding-left: max(6px, env(safe-area-inset-left, 6px)); padding-right: max(6px, env(safe-area-inset-right, 6px)); }
