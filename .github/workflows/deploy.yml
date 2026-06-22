@@ -26,8 +26,7 @@ jobs:
           npm run build
         env:
           VITE_BASE: /poker-game/
-          # 在 GitHub 仓库 Settings → Secrets → Actions 添加 WS_URL
-          VITE_WS_URL: ${{ secrets.WS_URL || '' }}
+          VITE_WS_URL: wss://poker-game-production-815c.up.railway.app
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
